@@ -1,0 +1,40 @@
+
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(type='text/javascript', src='https://www.google.com/jsapi')
+    script(type="text/javascript", src="javascript/api.js")
+
+    title StarWars
+  body
+    h3 Pick a category and get a random StarWars themed response!
+    
+    select#category(name='category')
+      option(value='None', selected) None
+      option(value='people') People
+      option(value='planets') Planets
+      option(value='starships') Starships
+      
+    //- select#people(name='people')
+    //-   option(value='None', selected) None
+    //-   option(value='LukeSkywalker') Luke Skywalker
+      
+      
+    input#ButtonForm(type='button', value='Search', onclick='search()') 
+    #branding(style='float: left;')
+    br
+    #content 
+    // Put the following javascript before the closing  tag.
+    // Place this tag where you want both of the search box and the search results to render
+    script.
+    gcse:search(defaultToImageSearch="true", AutoComplete="true")
+    //- gcse:searchresults-only
+
+    
